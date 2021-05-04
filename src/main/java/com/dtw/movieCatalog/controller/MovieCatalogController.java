@@ -26,7 +26,7 @@ public class MovieCatalogController {
 		
 		List<Rating> ratingList = webClientBuilder.build()
 				.get()
-				.uri("http://localhost:8083/rating")
+				.uri("http://ratings-data-service/rating")
 				.retrieve()
 				.bodyToMono(new ParameterizedTypeReference<List<Rating>>() {})
 				.block();
@@ -34,7 +34,7 @@ public class MovieCatalogController {
 		return ratingList.stream().map(rating -> {
 			Movie movie = webClientBuilder.build()
 				.get()
-				.uri("http://localhost:8082/movie/" + rating.getMovieId())
+				.uri("http://movie-data-service/movie/" + rating.getMovieId())
 				.retrieve()
 				.bodyToMono(Movie.class)
 				.block();
