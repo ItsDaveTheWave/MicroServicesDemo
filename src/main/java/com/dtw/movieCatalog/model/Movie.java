@@ -1,18 +1,14 @@
 package com.dtw.movieCatalog.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor @NoArgsConstructor
 public class Movie {
 
-	private String movieId;
-	private String name;
-	
-	public Movie() {}
-	public Movie(String movieId, String name) {
-		this.movieId = movieId;
-		this.name = name;
-	}
-
-	public String getMovieId() {return movieId;}
-	public void setMovieId(String movieId) {this.movieId = movieId;}
-	public String getName() {return name;}
-	public void setName(String name) {this.name = name;}
+	private Long id;
+	private String title;
+	private String sinopsis;
 }

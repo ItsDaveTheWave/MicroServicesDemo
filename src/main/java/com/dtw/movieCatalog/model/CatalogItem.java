@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor @NoArgsConstructor
 public class CatalogItem {
 
-	private String name;
+	private String title;
+	private String sinopsis;
 	private int rating;
 }
