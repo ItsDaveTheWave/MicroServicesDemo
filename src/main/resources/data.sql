@@ -1,3 +1,3 @@
 insert into rating(movie_Id, rating) values
-(1, 4),
-(2, 10);
+(100, 4),
+(550, 10);
