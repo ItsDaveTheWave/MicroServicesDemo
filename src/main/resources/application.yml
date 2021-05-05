@@ -1,12 +1,3 @@
 server.port: 8082
-spring:
-  datasource:
-    url: jdbc:h2:mem:db
-    driver-class-name: org.h2.Driver
-    username: sa
-    password: 
-  jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
-  h2:
-    console:
-      enabled: true  application:    name: movie-data-service
+theMovieDB.api.key: 33d642e882fb4dc05406fe935170743f
+spring:  application:    name: movie-data-service
