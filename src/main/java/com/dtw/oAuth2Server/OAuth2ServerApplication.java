@@ -11,12 +11,12 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @EnableAuthorizationServer
 public class OAuth2ServerApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(OAuth2ServerApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(OAuth2ServerApplication.class, args);
+    }
 
-	@Bean
-	public PasswordEncoder passwordEncoder() {
-		return PasswordEncoderFactories.createDelegatingPasswordEncoder();
-	}
+    @Bean
+    PasswordEncoder passwordEncoder() {
+        return PasswordEncoderFactories.createDelegatingPasswordEncoder();
+    }
 }
