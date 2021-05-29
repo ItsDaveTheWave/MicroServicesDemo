@@ -1,5 +1,6 @@
 package com.dtw.oAuth2Server.entity;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -18,9 +19,11 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @NoArgsConstructor
-public class User {
+public class User implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
 
-    public User(User user) {
+	public User(User user) {
         this.username = user.getUsername();
         this.password = user.getPassword();
         this.email = user.getEmail();
