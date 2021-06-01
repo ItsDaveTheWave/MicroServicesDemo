@@ -1,3 +1,1 @@
-server.port: 8082
 theMovieDB.api.key: 33d642e882fb4dc05406fe935170743f
-spring:  application:    name: movie-data-service
