@@ -17,19 +17,21 @@ public class MovieCatalogService {
 	@Autowired
 	private WebClient.Builder webClientBuilder;
 	
-	public List<Rating> getRatings() {
+	public List<Rating> getRatings(String token) {
 		return webClientBuilder.build()
 		.get()
 		.uri("http://ratings-data-service/rating")
+		.header("Authorization", token)
 		.retrieve()
 		.bodyToMono(new ParameterizedTypeReference<List<Rating>>() {})
-		.block();
+		.block();		
 	}
 	
-	public CatalogItem getCatalogItem(Rating rating) {
+	public CatalogItem getCatalogItem(Rating rating, String token) {
 		Movie movie = webClientBuilder.build()
 				.get()
 				.uri("http://movie-data-service/movie/" + rating.getMovieId())
+				.header("Authorization", token)
 				.retrieve()
 				.bodyToMono(Movie.class)
 				.block();
