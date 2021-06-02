@@ -1,1 +1,8 @@
 theMovieDB.api.key: 33d642e882fb4dc05406fe935170743f
+security:
+  oauth2:
+    resource:
+      token-info-uri: http://localhost:8282/oauth/check_token
+    client:
+      client-id: web
+      client-secret: webpass
