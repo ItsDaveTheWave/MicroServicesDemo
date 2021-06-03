@@ -33,6 +33,7 @@ public class RatingController {
 	}
 	
 	@GetMapping
+	@PreAuthorize("hasAuthority('ROLE_admin')")
 	public ResponseEntity<List<Rating>> getAll() {
 		return ResponseEntity.ok(ratingRepo.findAll());
 	}
