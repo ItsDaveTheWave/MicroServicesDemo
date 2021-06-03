@@ -6,7 +6,7 @@ eureka:
     instance-id: ${spring.application.name}:${random.int}
     hostname: localhost
 server:
-  port: 0
+  port: 8081
 spring:
   application:
     name: movie-catalog-service
