@@ -1,5 +1,5 @@
 INSERT INTO OAUTH_CLIENT_DETAILS (client_id, client_secret, web_server_redirect_uri, scope, access_token_validity, refresh_token_validity, resource_ids, authorized_grant_types, additional_information) VALUES 
-	('web', '{bcrypt}$2y$10$X0IqSKiqknGxsWZYdOFaNe6AwUZMTQZFkxjFnxyoFN7eiFju19u4m', 'http://localhost:8080/code', 'READ,WRITE', '3600', '10000', 'inventory,payment', 'authorization_code,password,refresh_token,implicit', '{}');
+	('web', '{bcrypt}$2y$10$X0IqSKiqknGxsWZYdOFaNe6AwUZMTQZFkxjFnxyoFN7eiFju19u4m', 'http://localhost:8080/login', 'READ,WRITE', '3600', '10000', 'inventory,payment', 'authorization_code,password,refresh_token,implicit', '{}');
 
 INSERT INTO PERMISSION (name) VALUES
 	('create_rating'),
