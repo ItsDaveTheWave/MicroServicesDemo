@@ -1,0 +1,19 @@
+<div class="container">
+    <button class="btn btn-info" type="button" [routerLink]="['/rating/form']">Get Rating by id</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Movie Id</th>
+                <th scope="col">Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let rating of ratings">
+                <th scope="row">{{rating.id}}</th>
+                <td>{{rating.movieId}}</td>
+                <td>{{rating.rating}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
